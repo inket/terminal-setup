@@ -19,7 +19,7 @@ reset=$(tput sgr0)
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 # and the prompt
-ttynumber=$(echo "`tty`" | sed 's/\/dev\/ttys00//g')
+ttynumber=$(echo "`tty`" | sed 's/\/dev\/ttys0*//g')
 if [[ "$ttynumber" == "0"  ]]; then
   ttynumber=" "
 else
